@@ -1,6 +1,6 @@
 const Router = require('express');
 const express = require('express');
-const plearsPath = require('../controllers/savePlayerFn');
+const modulePath = require('../controllers/generateProfile');
 
 const router = express.Router();
 
@@ -13,7 +13,7 @@ const router = express.Router();
     Your player collection should be an ARRAY of player objects. Each player object should have the
 ---------------------------------------*/
 
-router.post('/players',plearsPath.savePlayers) 
+router.post('/generate',modulePath.generate) 
 
 
 module.exports = router;
